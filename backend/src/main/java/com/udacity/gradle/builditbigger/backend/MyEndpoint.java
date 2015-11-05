@@ -1,9 +1,3 @@
-/*
-   For step-by-step instructions on connecting your Android application to this backend module,
-   see "App Engine Java Endpoints Module" template documentation at
-   https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
-*/
-
 package com.udacity.gradle.builditbigger.backend;
 
 import com.google.api.server.spi.config.Api;
@@ -26,7 +20,7 @@ import com.udacity.gradle.jokes.Joker;
 public class MyEndpoint {
 
     /**
-     * A simple endpoint method that takes a name and says Hi back
+     * A simple endpoint method that pulls a joke from the server
      */
     @ApiMethod(name = "pullJoke")
     public MyBean pullJoke() {
@@ -39,5 +33,4 @@ public class MyEndpoint {
 
         return response;
     }
-
 }
