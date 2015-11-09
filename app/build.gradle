@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+        testApplicationId "com.udacity.gradle.builditbigger.test"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     dexOptions {
         javaMaxHeapSize "4g"
@@ -28,7 +30,11 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     // Added for AdMob
     compile project(':androidjokelib')
-    compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.google.android.gms:play-services:8.1.0'
     compile project(path: ':backend', configuration: 'android-endpoints')
+
+    // For instrumentation testing
+    androidTestCompile 'com.android.support.test:runner:0.4'
+    // Conflict app/test dependencies
+    androidTestCompile 'com.android.support:support-annotations:23.1.0'
 }
