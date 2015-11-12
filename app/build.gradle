@@ -23,18 +23,27 @@ android {
         }
     }
     productFlavors {
+        paid {
+            applicationId "com.udacity.gradle.builditbigger.paid"
+        }
+        free {
+            applicationId "com.udacity.gradle.builditbigger.free"
+        }
+        mytest {
+        }
     }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    // Added for AdMob
     compile project(':androidjokelib')
-    compile 'com.google.android.gms:play-services:8.1.0'
     compile project(path: ':backend', configuration: 'android-endpoints')
+    freeCompile 'com.google.android.gms:play-services:8.1.0'
 
     // For instrumentation testing
-    androidTestCompile 'com.android.support.test:runner:0.4'
+    mytestCompile 'com.android.support.test:runner:0.4'
     // Conflict app/test dependencies
-    androidTestCompile 'com.android.support:support-annotations:23.1.0'
+    mytestCompile 'com.android.support:support-annotations:23.1.0'
+    // Necessary for tests to work
+    mytestCompile 'com.google.android.gms:play-services:8.1.0'
 }
