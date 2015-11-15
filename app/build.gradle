@@ -38,12 +38,12 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':androidjokelib')
     compile project(path: ':backend', configuration: 'android-endpoints')
-    freeCompile 'com.google.android.gms:play-services:8.1.0'
+    freeCompile 'com.google.android.gms:play-services-ads:8.3.0'
 
     // For instrumentation testing
     mytestCompile 'com.android.support.test:runner:0.4'
     // Conflict app/test dependencies
     mytestCompile 'com.android.support:support-annotations:23.1.0'
     // Necessary for tests to work
-    mytestCompile 'com.google.android.gms:play-services:8.1.0'
+    mytestCompile 'com.google.android.gms:play-services:8.3.0'
 }
