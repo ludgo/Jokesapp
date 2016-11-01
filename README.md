@@ -16,7 +16,7 @@ Testing dependencies:
 - Google Play Services `com.google.android.gms:play-services:8.3.0`
 - JUnit `junit:junit:4.12`
 
-For development, the newest Android SDK and Google App Engine Java Endpoints Module were used.
+For development, the newest Android SDK and Google App Engine Java Endpoints Module were used. Nowdays, the application is not mantained up to date with the latest Android platform changes.
 
 ## Functionality flow
 
